@@ -34,18 +34,25 @@
         <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
         <!-- Css -->
         <link rel="stylesheet" href="./assets/css/main.css" />
-        <style>
-            body {
-                font-family: "Gordita";
-            }
-        </style>
+        <!-- Scripts -->
+        <script src="./assets/js/scripts.js"></script>
     </head>
     <body>
-        <h1>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis
-            dolorum tenetur, unde saepe, magnam, quidem itaque aliquid quasi
-            tempore esse illum nulla iste libero cum quia obcaecati? Veritatis,
-            atque odit.
-        </h1>
+        <div class="container">
+            <!-------------- Header ------------>
+            <header id="header"></header>
+            <script>
+                load("#header", "./templates/header.html");
+            </script>
+
+            <!-------------- Main ------------>
+            <main></main>
+
+            <!-------------- Footer ------------>
+            <footer id="footer" class="footer"></footer>
+            <script>
+                load("#footer", "./templates/footer.html");
+            </script>
+        </div>
     </body>
 </html>
