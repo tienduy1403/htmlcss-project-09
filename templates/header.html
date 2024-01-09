@@ -1,6 +1,81 @@
-<div class="header__inner">
-    <!-- Logo -->
-    <div class="header__logo">
-        <img src="./assets/icon/logo.svg" alt="" class="header__img" />
+<div class="container">
+    <div class="header__inner">
+        <!-- Toggle-menu -->
+        <img
+            src="./assets/icon/toggle-menu.svg"
+            alt=""
+            class="toggle-menu icon d-lg-block"
+        />
+
+        <!-- Logo -->
+        <a href="./">
+            <div class="logo">
+                <img src="./assets/icon/logo.svg" alt="" class="logo__img" />
+                <h1 class="logo__brand">grocerymart</h1>
+            </div>
+        </a>
+
+        <!-- Navbar -->
+        <nav class="navbar d-lg-none">
+            <ul class="navbar__list">
+                <li>
+                    <a href="#!" class="navbar__link">
+                        Departments
+                        <img
+                            class="icon"
+                            src="./assets/icon/arrow-down.svg"
+                            alt=""
+                        />
+                    </a>
+                </li>
+                <li>
+                    <a href="#!" class="navbar__link">
+                        Grocery
+                        <img
+                            class="icon"
+                            src="./assets/icon/arrow-down.svg"
+                            alt=""
+                        />
+                    </a>
+                </li>
+                <li>
+                    <a href="#!" class="navbar__link">
+                        Beauty
+                        <img
+                            class="icon"
+                            src="./assets/icon/arrow-down.svg"
+                            alt=""
+                        />
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Action -->
+        <div class="action">
+            <div class="action__group action__group--single d-sm-none">
+                <button class="action__button">
+                    <img class="icon" src="./assets/icon/search.svg" alt="" />
+                </button>
+            </div>
+
+            <div class="action__group d-md-none">
+                <button class="action__button">
+                    <img class="icon" src="./assets/icon/heart.svg" alt="" />
+                    <span class="action__value">03</span>
+                </button>
+                <div class="action__separate"></div>
+                <button class="action__button">
+                    <img class="icon" src="./assets/icon/buy.svg" alt="" />
+                    <span class="action__value">$65.42</span>
+                </button>
+            </div>
+
+            <img
+                src="../assets/images/uifaces-popular-image.jpg"
+                alt=""
+                class="action__avatar"
+            />
+        </div>
     </div>
 </div>

@@ -20,3 +20,18 @@ select {
     font-size: inherit;
     font-family: inherit;
 }
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.icon {
+    filter: var(--icon-color);
+}
