@@ -1,3 +1,13 @@
+@use "../abstracts";
+
 .toggle-menu {
     display: none;
+
+    @include abstracts.breakpoints(lg) {
+        margin-right: 60px;
+    }
+
+    @include abstracts.breakpoints(sm) {
+        margin-right: initial;
+    }
 }

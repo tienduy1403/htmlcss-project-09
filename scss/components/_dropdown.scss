@@ -1,0 +1,113 @@
+%itemFlexCenter {
+    display: flex;
+    align-items: center;
+}
+.dropdown {
+    display: none;
+    padding-top: 54px;
+    position: absolute;
+    left: 0;
+    width: 1240px;
+
+    &__inner {
+        @extend %itemFlexCenter;
+
+        position: relative;
+        padding: 30px;
+        border-radius: 20px;
+        background: var(--dropdown-background);
+        box-shadow: 0px 40px 90px 20px var(--dropdown-shadow);
+
+        &::before {
+            content: url(../icon/arrow-up.svg);
+            position: absolute;
+            top: -13px;
+            left: var(--arrow-left-pos);
+            translate: -50% 0;
+            filter: var(--arrow-up-color);
+        }
+    }
+
+    &__menu {
+        height: calc(min(582px, 100vh - 158px) - 60px);
+        padding-right: 30px;
+        border-right: 1px solid var(--dropdown-separate-color);
+        overflow-y: auto;
+
+        &--not-menu {
+            overflow-y: initial;
+            border-right: none;
+            padding-right: 0;
+        }
+    }
+
+    &__title {
+        @extend %itemFlexCenter;
+
+        gap: 14px;
+
+        &:not(:first-child) {
+            margin-top: 30px;
+        }
+    }
+
+    &__icon {
+        width: 36px;
+        height: 36px;
+        position: relative;
+    }
+
+    &__img-2 {
+        position: absolute;
+        right: 3px;
+        bottom: 3px;
+    }
+
+    &__heading {
+        color: var(--text-color);
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 150%;
+    }
+
+    &__list {
+        margin: 13px 0 -7px 50px;
+    }
+
+    &__item {
+        padding: 7px 0;
+        color: var(--text-color);
+        font-size: 1.4rem;
+        line-height: 142.857%;
+
+        &:hover .dropdown__link {
+            color: #0071dc;
+            text-shadow: 1px 0px 0px rgba(0, 113, 220, 1);
+        }
+
+        &--active .sub-menu {
+            display: flex;
+        }
+    }
+}
+
+.sub-menu {
+    display: none;
+    gap: 77px;
+    position: absolute;
+    inset: 30px 30px 30px 352px;
+    overflow-y: auto;
+
+    .dropdown__item:hover {
+        color: #0071dc;
+        text-shadow: 1px 0px 0px rgba(0, 113, 220, 1);
+    }
+
+    &--not-menu {
+        padding-right: 30px;
+        position: initial;
+        inset: initial;
+        display: flex;
+        max-height: calc(min(582px, 100vh - 158px) - 60px);
+    }
+}

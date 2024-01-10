@@ -5,4 +5,10 @@ html.dark {
     --header-background: #171c28;
     --act-btn-background: #292e39;
     --act-btn-shadow: rgba(0, 0, 0, 0.2);
+    --dropdown-background: #292e39;
+    --dropdown-shadow: rgba(23, 28, 40, 0.4);
+    --arrow-up-color: brightness(0) saturate(100%) invert(14%) sepia(16%)
+        saturate(826%) hue-rotate(182deg) brightness(93%) contrast(87%);
+
+    --dropdown-separate-color: #171c28;
 }
