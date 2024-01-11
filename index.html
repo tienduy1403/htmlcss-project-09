@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="light">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -44,13 +44,70 @@
             load("#header", "./templates/header.html");
         </script>
 
-        <!-------------- Main ------------>
-        <main></main>
+        <div class="container">
+            <!-------------- Main ------------>
+            <main>
+                <div class="slide-show">
+                    <div class="slide-show__list">
+                        <a class="slide-show__link">
+                            <picture>
+                                <source
+                                    media="(max-width: 991.98px)"
+                                    srcset="
+                                        ./assets/images/slide-show-1-mobile.jpg
+                                    "
+                                />
+                                <img
+                                    src="./assets/images/slide-show-1.jpeg"
+                                    alt=""
+                                    class="slide-show__img"
+                                />
+                            </picture>
+                        </a>
+                        <a class="slide-show__link">
+                            <picture>
+                                <source
+                                    media="(max-width: 991.98px)"
+                                    srcset="
+                                        ./assets/images/slide-show-1-mobile.jpg
+                                    "
+                                />
+                                <img
+                                    src="./assets/images/slide-show-1.jpeg"
+                                    alt=""
+                                    class="slide-show__img"
+                                />
+                            </picture>
+                        </a>
+                        <a class="slide-show__link">
+                            <picture>
+                                <source
+                                    media="(max-width: 991.98px)"
+                                    srcset="
+                                        ./assets/images/slide-show-1-mobile.jpg
+                                    "
+                                />
+                                <img
+                                    src="./assets/images/slide-show-1.jpeg"
+                                    alt=""
+                                    class="slide-show__img"
+                                />
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="slide-page">
+                        <span class="slide-page__num">1</span>
+                        <span class="slide-page__slider"></span>
+                        <span class="slide-page__num">5</span>
+                    </div>
+                </div>
+            </main>
 
-        <!-------------- Footer ------------>
-        <footer id="footer" class="footer"></footer>
-        <script>
-            load("#footer", "./templates/footer.html");
-        </script>
+            <!-------------- Footer ------------>
+            <footer id="footer" class="footer"></footer>
+            <script>
+                load("#footer", "./templates/footer.html");
+            </script>
+        </div>
     </body>
 </html>

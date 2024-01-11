@@ -24,13 +24,84 @@
 
 .navbar {
     margin-left: 144px;
+    transition: translate 0.5s;
 
     @include abstracts.breakpoints(xl) {
         margin-left: 60px;
     }
 
+    @include abstracts.breakpoints(lg) {
+        margin-left: 0;
+        padding: 20px;
+        position: fixed;
+        inset: 0 50% 0 0;
+        z-index: 100;
+        background: var(--navbar--background-color);
+        border-radius: 0px 20px 20px 0px;
+        translate: -100% 0;
+        overflow-y: auto;
+
+        &.show {
+            translate: 0;
+        }
+
+        &.show ~ &__overlay {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    @include abstracts.breakpoints(sm) {
+        inset: 0 20% 0 0;
+    }
+
+    &__close {
+        display: none;
+        padding-bottom: 10px;
+        padding-inline: 0px;
+    }
+
+    &__btn {
+        @include abstracts.breakpoints(md) {
+            padding: 10px 0;
+            align-items: center;
+        }
+
+        &-name {
+            margin-left: 16px;
+            color: var(--text-color);
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 146.667%;
+        }
+
+        &-value {
+            @extend .navbar__btn-name;
+
+            margin-left: auto;
+        }
+    }
+
+    &__overlay {
+        z-index: 99;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.5s opacity 0.5s;
+
+        @include abstracts.breakpoints(lg) {
+            position: fixed;
+            inset: 0 0 0 0;
+            background: var(--overlay-background-color);
+        }
+    }
+
     &__list {
         @extend %itemFlexCenter;
+
+        @include abstracts.breakpoints(lg) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
     &__item {
@@ -47,10 +118,42 @@
         &:hover .dropdown {
             display: block;
         }
+
+        @include abstracts.breakpoints(lg) {
+            width: 100%;
+            padding: 10px 0;
+
+            &:hover .dropdown {
+                display: none;
+            }
+
+            &--active .dropdown {
+                display: block !important;
+            }
+
+            &--active .navbar__icon {
+                rotate: 0deg;
+            }
+        }
+    }
+
+    &__icon {
+        @include abstracts.breakpoints(lg) {
+            rotate: -90deg;
+            transition: rotate 0.3s;
+        }
     }
 
     &__link {
         @extend %itemFlexCenter;
+
+        @include abstracts.breakpoints(lg) {
+            justify-content: space-between;
+            height: auto;
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 150%;
+        }
 
         gap: 6px;
         height: 50px;

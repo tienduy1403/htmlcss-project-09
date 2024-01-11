@@ -1,11 +1,12 @@
 <div class="container">
     <div class="header__inner">
         <!-- Toggle-menu -->
-        <img
-            src="./assets/icon/toggle-menu.svg"
-            alt=""
-            class="toggle-menu icon d-lg-block"
-        />
+        <button
+            class="toggle-menu d-lg-block js-toggle"
+            toggle-target="#navbar"
+        >
+            <img src="./assets/icon/toggle-menu.svg" alt="" class="icon" />
+        </button>
 
         <!-- Logo -->
         <a href="./">
@@ -16,13 +17,31 @@
         </a>
 
         <!-- Navbar -->
-        <nav class="navbar d-lg-none">
+        <nav id="navbar" class="navbar hide">
+            <!-- Button Close Navbar -->
+            <button
+                class="navbar__close js-toggle d-lg-block"
+                toggle-target="#navbar"
+            >
+                <img src="./assets/icon/arrow-left.svg" alt="" class="icon" />
+            </button>
+            <!-- Navbar BTN Tablet/ Mobile -->
+            <a href="#!" class="navbar__btn d-none d-md-flex">
+                <img src="./assets/icon/buy.svg" alt="" class="icon" />
+                <span class="navbar__btn-name">Card</span>
+                <span class="navbar__btn-value">3</span>
+            </a>
+            <a href="#!" class="navbar__btn d-none d-md-flex">
+                <img src="./assets/icon/heart.svg" alt="" class="icon" />
+                <span class="navbar__btn-name">Favorite</span>
+                <span class="navbar__btn-value">3</span>
+            </a>
             <ul class="navbar__list js-dropdown-list">
                 <li class="navbar__item">
                     <a href="#!" class="navbar__link">
                         Departments
                         <img
-                            class="icon"
+                            class="navbar__icon icon"
                             src="./assets/icon/arrow-down.svg"
                             alt=""
                         />
@@ -32,7 +51,7 @@
                         <div class="dropdown__inner">
                             <!-- Menu -->
                             <div class="dropdown__menu">
-                                <div class="dropdown__title">
+                                <div class="dropdown__title d-lg-none">
                                     <div class="dropdown__icon">
                                         <img
                                             class="dropdown__img"
@@ -4357,7 +4376,7 @@
                     <a href="#!" class="navbar__link">
                         Grocery
                         <img
-                            class="icon"
+                            class="navbar__icon icon"
                             src="./assets/icon/arrow-down.svg"
                             alt=""
                         />
@@ -4725,7 +4744,7 @@
                     <a href="#!" class="navbar__link">
                         Beauty
                         <img
-                            class="icon"
+                            class="navbar__icon icon"
                             src="./assets/icon/arrow-down.svg"
                             alt=""
                         />
@@ -4744,17 +4763,240 @@
                                             <div class="dropdown__icon">
                                                 <img
                                                     class="dropdown__img"
-                                                    src="./assets/icon/polygon.svg"
+                                                    src="./assets/icon/rectangle.svg"
                                                     alt=""
                                                 />
                                                 <img
                                                     class="dropdown__img-2 icon"
-                                                    src="./assets/icon/category-4.svg"
+                                                    src="./assets/icon/category-2.1.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <h3 class="dropdown__heading">
+                                                Featured Shops
+                                            </h3>
+                                        </div>
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item">
+                                                <a href="#!">
+                                                    Pickup Today in Beauty
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a href="#!">
+                                                    Pickup Today in Beauty
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a href="#!"> Beauty Deals </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a href="#!">
+                                                    Walmart Exclusives
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a href="#!"
+                                                    >Luxury Beauty Deals
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a href="#!"> New Arrivals </a>
+                                            </li>
+                                        </ul>
+                                        <div class="dropdown__title">
+                                            <div class="dropdown__icon">
+                                                <img
+                                                    class="dropdown__img"
+                                                    src="./assets/icon/icon-3.1.svg"
+                                                    alt=""
+                                                />
+                                                <img
+                                                    class="dropdown__img-2 icon"
+                                                    src="./assets/icon/category-3.1.svg"
                                                     alt=""
                                                 />
                                             </div>
                                             <h3 class="dropdown__heading">
                                                 Trending in Beauty
+                                            </h3>
+                                        </div>
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item">
+                                                <a href="#!">
+                                                    Trending Beauty Products
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a href="#!">
+                                                    Celebrate Earth Day
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a href="#!">
+                                                    Prom-ready Beauty
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a href="#!"> Summer Beauty </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a href="#!">
+                                                    Travel Size & Minis
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Submenu column 2 -->
+                                    <div class="sub-menu__column">
+                                        <div class="dropdown__title">
+                                            <div class="dropdown__icon">
+                                                <img
+                                                    class="dropdown__img"
+                                                    src="./assets/icon/icon-3.2.svg"
+                                                    alt=""
+                                                />
+                                                <img
+                                                    class="dropdown__img-2 icon"
+                                                    src="./assets/icon/category-3.2.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <h3 class="dropdown__heading">
+                                                Featured Brands
+                                            </h3>
+                                        </div>
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item">
+                                                <a href="#!"> Shop All </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a href="#!">New in Bakery </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a href="#!"> Sliced Bread </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a href="#!"> Rolls & Buns </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a href="#!"> Tortillas </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a href="#!">
+                                                    Breakfast Breads
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a href="#!">Pies </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a href="#!">
+                                                    Cookies & Brownies
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                        <div class="dropdown__title">
+                                            <div class="dropdown__icon">
+                                                <img
+                                                    class="dropdown__img"
+                                                    src="./assets/icon/icon-3.3.svg"
+                                                    alt=""
+                                                />
+                                                <img
+                                                    class="dropdown__img-2 icon"
+                                                    src="./assets/icon/category-3.3.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <h3 class="dropdown__heading">
+                                                Communities to Support
+                                            </h3>
+                                        </div>
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item">
+                                                <a href="#!">
+                                                    Black Owned Beauty
+                                                </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a href="#!">
+                                                    LatinX Owned Beauty</a
+                                                >
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a href="#!"
+                                                    >AAPI Owned Beauty
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Submenu column 3 -->
+                                    <div class="sub-menu__column">
+                                        <div class="dropdown__title">
+                                            <div class="dropdown__icon">
+                                                <img
+                                                    class="dropdown__img"
+                                                    src="./assets/icon/icon-3.4.svg"
+                                                    alt=""
+                                                />
+                                                <img
+                                                    class="dropdown__img-2 icon"
+                                                    src="./assets/icon/category-3.4.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <h3 class="dropdown__heading">
+                                                Premium Beauty
+                                            </h3>
+                                        </div>
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item">
+                                                <a href="#!"> Shop All </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a href="#!"> Hair Color </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a href="#!"> Hair Care </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a href="#!"> Skincare </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a href="#!"> Fragrance </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a href="#!"> Makeup </a>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <a href="#!">
+                                                    Beauty Tech & Tools
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Submenu column 4 -->
+                                    <div class="sub-menu__column">
+                                        <div class="dropdown__title">
+                                            <div class="dropdown__icon">
+                                                <img
+                                                    class="dropdown__img"
+                                                    src="./assets/icon/icon-3.5.svg"
+                                                    alt=""
+                                                />
+                                                <img
+                                                    class="dropdown__img-2 icon"
+                                                    src="./assets/icon/category-3.5.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <h3 class="dropdown__heading">
+                                                Beauty
                                             </h3>
                                         </div>
                                         <ul class="dropdown__list">
@@ -4771,8 +5013,8 @@
                                             </li>
                                             <li class="dropdown__item">
                                                 <a href="#!">
-                                                    Beauty Tech & Tools
-                                                </a>
+                                                    Beauty Tech & Tools</a
+                                                >
                                             </li>
                                             <li class="dropdown__item">
                                                 <a href="#!"> Makeup </a>
@@ -4792,277 +5034,6 @@
                                             <li class="dropdown__item">
                                                 <a href="#!"> Skincare </a>
                                             </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!"> Healthy </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!"> Smoothies </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <!-- Submenu column 2 -->
-                                    <div class="sub-menu__column">
-                                        <div class="dropdown__title">
-                                            <div class="dropdown__icon">
-                                                <img
-                                                    class="dropdown__img"
-                                                    src="./assets/icon/star.svg"
-                                                    alt=""
-                                                />
-                                                <img
-                                                    class="dropdown__img-2 icon"
-                                                    src="./assets/icon/category-6.svg"
-                                                    alt=""
-                                                />
-                                            </div>
-                                            <h3 class="dropdown__heading">
-                                                Featured Shops
-                                            </h3>
-                                        </div>
-                                        <ul class="dropdown__list">
-                                            <li class="dropdown__item">
-                                                <a href="#!">
-                                                    Pickup Today in Beauty
-                                                </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!"> New in Bakery </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!"> Equate Beauty </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!"> Beauty Deals </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!">
-                                                    Walmart Exclusives
-                                                </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!">
-                                                    Luxury Beauty Deals
-                                                </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!"> New Arrivals </a>
-                                            </li>
-                                        </ul>
-
-                                        <div class="dropdown__title">
-                                            <div class="dropdown__icon">
-                                                <img
-                                                    class="dropdown__img"
-                                                    src="./assets/icon/rectangle.svg"
-                                                    alt=""
-                                                />
-                                                <img
-                                                    class="dropdown__img-2 icon"
-                                                    src="./assets/icon/category-5.svg"
-                                                    alt=""
-                                                />
-                                            </div>
-                                            <h3 class="dropdown__heading">
-                                                Featured Brands
-                                            </h3>
-                                        </div>
-                                        <ul class="dropdown__list">
-                                            <li class="dropdown__item">
-                                                <a href="#!"> Shop All </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!"> New in Bakery </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!"> Sliced Bread </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!"> Rolls & Buns </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!"> Tortillas </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <!-- Submenu column 3 -->
-                                    <div class="sub-menu__column">
-                                        <div class="dropdown__title">
-                                            <div class="dropdown__icon">
-                                                <img
-                                                    class="dropdown__img"
-                                                    src="./assets/icon/polygon-2.svg"
-                                                    alt=""
-                                                />
-                                                <img
-                                                    class="dropdown__img-2 icon"
-                                                    src="./assets/icon/category-3.svg"
-                                                    alt=""
-                                                />
-                                            </div>
-                                            <h3 class="dropdown__heading">
-                                                Premium Beauty
-                                            </h3>
-                                        </div>
-                                        <ul class="dropdown__list">
-                                            <li class="dropdown__item">
-                                                <a href="#!"> Shop All </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!"> Hair Color </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!"> Hair Care </a>
-                                            </li>
-                                        </ul>
-
-                                        <div class="dropdown__title">
-                                            <div class="dropdown__icon">
-                                                <img
-                                                    class="dropdown__img"
-                                                    src="./assets/icon/ellipse.svg"
-                                                    alt=""
-                                                />
-                                                <img
-                                                    class="dropdown__img-2 icon"
-                                                    src="./assets/icon/category-6.svg"
-                                                    alt=""
-                                                />
-                                            </div>
-                                            <h3 class="dropdown__heading">
-                                                Communities to Support
-                                            </h3>
-                                        </div>
-                                        <ul class="dropdown__list">
-                                            <li class="dropdown__item">
-                                                <a href="#!">
-                                                    Black Owned Beauty
-                                                </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!">
-                                                    LatinX Owned Beauty
-                                                </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!">
-                                                    AAPI Owned Beauty
-                                                </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!">
-                                                    Beauty Tech & Tools
-                                                </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!"> Summer Beauty </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!">
-                                                    Celebrate Earth Day
-                                                </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!">
-                                                    Trending Beauty Products
-                                                </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!">
-                                                    Beauty Tech & Tools
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <!-- Submenu column 4 -->
-                                    <div class="sub-menu__column">
-                                        <div class="dropdown__title">
-                                            <div class="dropdown__icon">
-                                                <img
-                                                    class="dropdown__img"
-                                                    src="./assets/icon/polygon-2.svg"
-                                                    alt=""
-                                                />
-                                                <img
-                                                    class="dropdown__img-2 icon"
-                                                    src="./assets/icon/category-3.svg"
-                                                    alt=""
-                                                />
-                                            </div>
-                                            <h3 class="dropdown__heading">
-                                                Premium Beauty
-                                            </h3>
-                                        </div>
-                                        <ul class="dropdown__list">
-                                            <li class="dropdown__item">
-                                                <a href="#!"> Shop All </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!"> Hair Color </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!"> Hair Care </a>
-                                            </li>
-                                        </ul>
-
-                                        <div class="dropdown__title">
-                                            <div class="dropdown__icon">
-                                                <img
-                                                    class="dropdown__img"
-                                                    src="./assets/icon/ellipse.svg"
-                                                    alt=""
-                                                />
-                                                <img
-                                                    class="dropdown__img-2 icon"
-                                                    src="./assets/icon/category-6.svg"
-                                                    alt=""
-                                                />
-                                            </div>
-                                            <h3 class="dropdown__heading">
-                                                Communities to Support
-                                            </h3>
-                                        </div>
-                                        <ul class="dropdown__list">
-                                            <li class="dropdown__item">
-                                                <a href="#!">
-                                                    Black Owned Beauty
-                                                </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!">
-                                                    LatinX Owned Beauty
-                                                </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!">
-                                                    AAPI Owned Beauty
-                                                </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!">
-                                                    Beauty Tech & Tools
-                                                </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!"> Summer Beauty </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!">
-                                                    Celebrate Earth Day
-                                                </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!">
-                                                    Trending Beauty Products
-                                                </a>
-                                            </li>
-                                            <li class="dropdown__item">
-                                                <a href="#!">
-                                                    Beauty Tech & Tools
-                                                </a>
-                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -5072,6 +5043,7 @@
                 </li>
             </ul>
         </nav>
+        <div class="navbar__overlay js-toggle" toggle-target="#navbar"></div>
 
         <!-- Action -->
         <div class="action">

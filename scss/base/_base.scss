@@ -13,12 +13,14 @@ body {
     font-size: 1.6rem;
 }
 
+a,
 button,
 input,
 textarea,
 select {
     font-size: inherit;
     font-family: inherit;
+    // -webkit-tap-highlight-color: transparent;
 }
 
 a {
