@@ -12,11 +12,11 @@
     z-index: 1;
     width: 1240px;
 
-    @include abstracts.breakpoints(xxl) {
+    @include abstracts.screen(xxl) {
         width: 100%;
     }
 
-    @include abstracts.breakpoints(lg) {
+    @include abstracts.screen(lg) {
         display: none;
         position: initial;
         padding-top: 0;
@@ -40,7 +40,7 @@
             filter: var(--arrow-up-color);
         }
 
-        @include abstracts.breakpoints(lg) {
+        @include abstracts.screen(lg) {
             padding: 0;
             position: initial;
             border-radius: 0;
@@ -58,7 +58,7 @@
         border-right: 1px solid var(--dropdown-separate-color);
         overflow-y: auto;
 
-        @include abstracts.breakpoints(lg) {
+        @include abstracts.screen(lg) {
             padding: 10px 0 0;
             height: auto;
             border-right: none;
@@ -104,7 +104,7 @@
     &__list {
         margin: 13px 0 -7px 50px;
 
-        @include abstracts.breakpoints(lg) {
+        @include abstracts.screen(lg) {
             margin: 0;
         }
     }
@@ -115,7 +115,7 @@
         font-size: 1.4rem;
         line-height: 142.857%;
 
-        @include abstracts.breakpoints(lg) {
+        @include abstracts.screen(lg) {
             padding: 10px 0;
         }
 
@@ -128,7 +128,7 @@
         &--active .sub-menu {
             display: flex;
 
-            @include abstracts.breakpoints(lg) {
+            @include abstracts.screen(lg) {
                 display: block;
             }
         }
@@ -142,18 +142,22 @@
     inset: 30px 30px 30px 352px;
     overflow-y: auto;
 
-    @include abstracts.breakpoints(xl) {
+    @include abstracts.screen(xxl) {
+        padding-right: 50px;
+    }
+
+    @include abstracts.screen(xl) {
         gap: 50px;
         inset: 30px 30px 30px 322px;
     }
 
-    @include abstracts.breakpoints(lg) {
+    @include abstracts.screen(lg) {
         position: initial;
         overflow-y: initial;
     }
 
     & .dropdown__list {
-        @include abstracts.breakpoints(lg) {
+        @include abstracts.screen(lg) {
             margin: 13px 0 -7px 50px;
         }
     }
@@ -164,11 +168,11 @@
     }
 
     &--not-menu {
-        @include abstracts.breakpoints(xl) {
+        @include abstracts.screen(xl) {
             padding-right: 77px;
         }
 
-        @include abstracts.breakpoints(lg) {
+        @include abstracts.screen(lg) {
             display: block;
             max-height: initial;
         }
@@ -182,13 +186,13 @@
 
     &__column {
         &:not(:first-child) {
-            @include abstracts.breakpoints(lg) {
+            @include abstracts.screen(lg) {
                 margin-top: 30px;
             }
         }
 
         &:first-child {
-            @include abstracts.breakpoints(lg) {
+            @include abstracts.screen(lg) {
                 margin-top: 14px;
             }
         }

@@ -3,11 +3,11 @@
 .toggle-menu {
     display: none;
 
-    @include abstracts.breakpoints(lg) {
+    @include abstracts.screen(lg) {
         margin-right: 60px;
     }
 
-    @include abstracts.breakpoints(sm) {
+    @include abstracts.screen(sm) {
         margin-right: initial;
     }
 }

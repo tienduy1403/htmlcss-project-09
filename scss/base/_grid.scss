@@ -2,19 +2,18 @@
 
 // Breakpoints, dimension, container, row, column, v.v
 $grid-breakpoints: (
-    xs: 0,
-    sm: 576px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px,
     xxl: 1400px,
+    xl: 1200px,
+    lg: 992px,
+    md: 768px,
+    sm: 576px,
 );
 $container-max-widths: (
-    sm: 540px,
-    md: 720px,
-    lg: 960px,
-    xl: 1140px,
-    xxl: 1370px,
+    sm: 100%,
+    md: 570px,
+    lg: 750px,
+    xl: 990px,
+    xxl: 1140px,
 );
 $grid-columns: 12 !default;
 $grid-gutter-width: 30px !default;
@@ -44,6 +43,7 @@ $gutters: (
 
 .container {
     @extend .container-fluid;
+    width: 1370px;
 }
 
 .row {
@@ -63,13 +63,9 @@ $gutters: (
     flex: 1 0;
 }
 
-@mixin make-media-query($dimension, $bypass: false) {
-    @if $bypass {
+@mixin make-media-query($dimension) {
+    @media (max-width: ($dimension - 0.02)) {
         @content;
-    } @else {
-        @media (min-width: $dimension) {
-            @content;
-        }
     }
 }
 
@@ -115,10 +111,9 @@ $gutters: (
 
 @each $breakpoint, $dimension in $grid-breakpoints {
     $max-width: map-get($container-max-widths, $breakpoint);
-    $is-xs: $breakpoint == xs;
-    $infix: if($is-xs, "", "-#{$breakpoint}");
+    $infix: -#{$breakpoint};
 
-    @include make-media-query($dimension, $is-xs) {
+    @include make-media-query($dimension) {
         .container {
             max-width: $max-width;
         }

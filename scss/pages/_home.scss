@@ -1,0 +1,62 @@
+@use "../abstracts";
+
+%itemFlexCenter {
+    display: flex;
+    align-items: center;
+}
+
+.home {
+    &__container {
+        margin-top: 40px;
+
+        @include abstracts.screen(md) {
+            margin-top: 30px;
+        }
+    }
+}
+
+.cate {
+    &__heading {
+        color: var(--text-color);
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 141.667%;
+    }
+
+    &__list {
+        margin-top: 20px;
+    }
+
+    &-item {
+        @extend %itemFlexCenter;
+
+        padding: 20px 26px 20px 20px;
+        background: var(--cate-item-background);
+        border-radius: 16px;
+
+        &__img {
+            width: 116px;
+            height: 116px;
+            flex-shrink: 0;
+            background: var(--body-background-color);
+            border-radius: 8px;
+        }
+
+        &__infor {
+            margin-left: 20px;
+        }
+
+        &__price {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 145.455%;
+        }
+
+        &__desc {
+            margin-top: 6px;
+            color: var(--text-color);
+            line-height: 150%;
+        }
+    }
+}

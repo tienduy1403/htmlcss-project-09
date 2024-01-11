@@ -1,5 +1,4 @@
 $grid-breakpoints: (
-    xs: 0,
     sm: 576px,
     md: 768px,
     lg: 992px,
@@ -7,7 +6,7 @@ $grid-breakpoints: (
     xxl: 1400px,
 );
 
-@mixin breakpoints($infix) {
+@mixin screen($infix) {
     $breakpoint: map-get($grid-breakpoints, $infix);
     @if ($breakpoint) {
         @media (max-width: ($breakpoint - 0.02)) {
