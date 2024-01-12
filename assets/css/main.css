@@ -1641,6 +1641,11 @@ html.dark {
   color: var(--text-footer-color);
   font-weight: 500;
 }
+@media (max-width: 575.98px) {
+  .footer__copyright {
+    font-size: 1.4rem;
+  }
+}
 .footer__bottom {
   margin-top: 50px;
   justify-content: space-between;
