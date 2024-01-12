@@ -69,7 +69,7 @@ $gutters: (
     }
 }
 
-@mixin make-row-columns($infix) {
+@mixin make-row-columns($infix: null) {
     @for $i from 1 through $grid-columns * 0.5 {
         .row-cols#{$infix}-#{$i} > * {
             flex: 0 0 auto;
@@ -78,7 +78,7 @@ $gutters: (
     }
 }
 
-@mixin make-columns($infix) {
+@mixin make-columns($infix: null) {
     @for $i from 1 through $grid-columns {
         .col#{$infix}-#{$i} {
             flex: 0 0 auto;
@@ -87,7 +87,7 @@ $gutters: (
     }
 }
 
-@mixin make-offsets($infix) {
+@mixin make-offsets($infix: null) {
     @for $i from 0 to $grid-columns {
         .offset#{$infix}-#{$i} {
             margin-left: if($i > 0, math.div(100%, $grid-columns) * $i, 0);
@@ -95,7 +95,7 @@ $gutters: (
     }
 }
 
-@mixin make-gutters($infix) {
+@mixin make-gutters($infix: null) {
     @each $i, $ratio in $gutters {
         .g#{$infix}-#{$i},
         .gx#{$infix}-#{$i} {
@@ -108,6 +108,14 @@ $gutters: (
         }
     }
 }
+
+@include make-row-columns();
+
+@include make-columns();
+
+@include make-offsets();
+
+@include make-gutters();
 
 @each $breakpoint, $dimension in $grid-breakpoints {
     $max-width: map-get($container-max-widths, $breakpoint);

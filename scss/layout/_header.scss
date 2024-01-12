@@ -6,8 +6,15 @@
 }
 
 .header {
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
     padding: 30px 0;
     background: var(--header-background);
+
+    @include abstracts.screen(lg) {
+        padding: 16px 0;
+    }
 }
 
 .header__inner {

@@ -1,3 +1,179 @@
+@use "../abstracts";
+
+%itemFlexCenter {
+    display: flex;
+    align-items: center;
+}
+
 .footer {
-    height: 5000px;
+    background: var(--footer-background-color);
+
+    &__inner {
+        padding: 50px 0;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 60px;
+
+        @include abstracts.screen(lg) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__desc {
+        margin-top: 30px;
+        color: var(--text-color);
+        line-height: 150%;
+    }
+
+    &__subdesc {
+        margin-top: 40px;
+        color: var(--text-color);
+        line-height: 150%;
+    }
+
+    &__form {
+        @extend %itemFlexCenter;
+
+        gap: 10px;
+        padding: 16px 0;
+    }
+
+    &__input {
+        padding: 10px 12px;
+        border-radius: 5px;
+        border: 2px solid var(--input-border-color);
+        outline: none;
+        font-size: 1.5rem;
+        font-weight: 500;
+        background: transparent;
+
+        &::placeholder {
+            opacity: 0.6;
+            color: var(--text-color);
+        }
+    }
+
+    &__submit {
+        padding: 12px 14px;
+        background: var(--submit-button-color);
+        border-radius: 5px;
+        color: var(--text-color);
+    }
+
+    &__heading {
+        color: var(--text-color);
+        font-weight: 900;
+        font-size: 1.8rem;
+    }
+
+    &__list,
+    &__email {
+        margin-top: 30px;
+    }
+
+    &__link,
+    &__email,
+    &__tel,
+    &__telto,
+    &__mailto,
+    &__add,
+    &__hours,
+    &__add-desc {
+        display: block;
+        padding: 8px 0;
+        line-height: 140%;
+        color: var(--text-color);
+    }
+
+    &__telto,
+    &__mailto {
+        text-decoration: underline;
+    }
+
+    &__add-desc,
+    &__hours-desc,
+    &__copyright {
+        color: var(--text-footer-color);
+        font-weight: 500;
+    }
+
+    &__bottom {
+        @extend %itemFlexCenter;
+
+        margin-top: 50px;
+        justify-content: space-between;
+
+        @include abstracts.screen(lg) {
+            flex-direction: column-reverse;
+            gap: 50px;
+        }
+    }
+
+    &__social {
+        @extend %itemFlexCenter;
+
+        justify-content: center;
+        gap: 20px;
+
+        &-icon {
+            @extend %itemFlexCenter;
+
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+
+            &--facebook {
+                background: #4863a9;
+            }
+
+            &--youtube {
+                background: #f00;
+            }
+
+            &--tiktok {
+                background: #000;
+            }
+
+            &--twitter {
+                background: #4999e6;
+            }
+            &--linkedin {
+                background: #2f71ab;
+            }
+        }
+
+        &-img {
+            filter: brightness(0) saturate(100%) invert(100%) sepia(1%)
+                saturate(6008%) hue-rotate(36deg) brightness(118%)
+                contrast(100%);
+        }
+    }
+
+    @include abstracts.screen(xl) {
+        &__row {
+            gap: 40px;
+        }
+
+        &__desc,
+        &__subdesc,
+        &__input,
+        &__submit,
+        &__link,
+        &__tel,
+        &__mailto,
+        &__add,
+        &__hours,
+        &__hours-desc,
+        &__add-desc {
+            font-size: 1.4rem;
+        }
+
+        &__heading {
+            font-size: 1.6rem;
+        }
+    }
 }

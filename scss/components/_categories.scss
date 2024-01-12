@@ -1,0 +1,131 @@
+@use "../abstracts";
+
+%itemFlexCenter {
+    display: flex;
+    align-items: center;
+}
+
+.cate {
+    --grid-gutter-x: 51px;
+
+    &__heading {
+        color: var(--text-color);
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 141.667%;
+
+        @include abstracts.screen(sm) {
+            font-size: 2.2rem;
+            line-height: 145.455%;
+        }
+    }
+
+    &__list {
+        margin-top: 20px;
+    }
+
+    &-item {
+        @extend %itemFlexCenter;
+
+        padding: 20px 26px 20px 20px;
+        background: var(--cate-item-background);
+        border-radius: 16px;
+
+        &__img {
+            width: 116px;
+            height: 116px;
+            flex-shrink: 0;
+            background: var(--imgcate-background-color);
+            border-radius: 8px;
+
+            @include abstracts.screen(sm) {
+                width: 88px;
+                height: 88px;
+            }
+        }
+
+        &__infor {
+            margin-left: 20px;
+
+            @include abstracts.screen(lg) {
+                margin-left: 0;
+                justify-content: center;
+            }
+
+            @include abstracts.screen(md) {
+                margin-left: 18px;
+            }
+        }
+
+        &__price {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 145.455%;
+
+            @include abstracts.screen(xl) {
+                margin-top: 10px;
+                text-align: center;
+            }
+
+            @include abstracts.screen(md) {
+                margin-top: 0;
+                text-align: left;
+            }
+
+            @include abstracts.screen(sm) {
+                font-size: 1.8rem;
+                font-weight: 700;
+                line-height: 144.444%;
+            }
+        }
+
+        &__desc {
+            --line-clamp: 3;
+
+            margin-top: 6px;
+            color: var(--text-color);
+            line-height: 150%;
+
+            @include abstracts.screen(xxl) {
+                font-size: 1.5rem;
+            }
+
+            @include abstracts.screen(xl) {
+            }
+
+            @include abstracts.screen(lg) {
+                --line-clamp: 2;
+                text-align: center;
+            }
+
+            @include abstracts.screen(md) {
+                text-align: initial;
+            }
+
+            @include abstracts.screen(sm) {
+                font-size: 1.4rem;
+                line-height: 142.857%;
+            }
+        }
+
+        @include abstracts.screen(lg) {
+            flex-direction: column;
+        }
+
+        @include abstracts.screen(md) {
+            flex-direction: row;
+        }
+
+        @include abstracts.screen(sm) {
+        }
+    }
+
+    @include abstracts.screen(xl) {
+        --grid-gutter-x: 30px;
+    }
+
+    @include abstracts.screen(md) {
+        --grid-gutter-y: 20px;
+    }
+}
