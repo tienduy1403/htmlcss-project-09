@@ -15,10 +15,6 @@
         flex-grow: 1;
         background: var(--sign-up-left-bg);
 
-        @include abstracts.screen(md) {
-            background: var(--sign-up-right-bg);
-        }
-
         &__wrap {
             margin: auto;
             padding: 30px;

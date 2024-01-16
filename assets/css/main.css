@@ -1413,7 +1413,7 @@ html.dark {
       saturate(1048%) hue-rotate(183deg) brightness(96%) contrast(89%);
   --filter-box-shadow-bg: rgba(0, 0, 0, 0.4);
   --btn-normal-bg: #171c28;
-  --sign-up-left-bg: #000;
+  --sign-up-left-bg: #171c28;
   --sign-up-right-bg: #292e39;
   --sign-up-placeholder-text-color: #b9babe;
   --form-label-color: #b9babe;
@@ -2654,6 +2654,21 @@ html.dark {
   display: inline-block;
 }
 
+.message {
+  padding: 12px 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid #5bc45f;
+  border-radius: 8px;
+  background: rgba(39, 243, 117, 0.2);
+}
+.message-text {
+  color: #5bc45f;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
 .home {
   margin-bottom: 50px;
 }
@@ -2679,11 +2694,6 @@ html.dark {
   display: flex;
   flex-grow: 1;
   background: var(--sign-up-left-bg);
-}
-@media (max-width: 767.98px) {
-  .auth-left {
-    background: var(--sign-up-right-bg);
-  }
 }
 .auth-left__wrap {
   margin: auto;
@@ -2808,6 +2818,18 @@ html.dark {
 
 .auth-login {
   translate: 0 0;
+}
+
+.auth__reset-password {
+  max-width: 427px;
+}
+
+.message--forgot {
+  margin-top: 20px;
+}
+
+.form--forgot {
+  margin-top: initial;
 }
 
 /*# sourceMappingURL=main.css.map */
