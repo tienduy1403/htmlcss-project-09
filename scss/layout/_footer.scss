@@ -88,6 +88,12 @@
         color: var(--text-color);
     }
 
+    &__link {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
     &__telto,
     &__mailto {
         text-decoration: underline;

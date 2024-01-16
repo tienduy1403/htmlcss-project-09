@@ -1,0 +1,210 @@
+@use "../abstracts";
+
+.filter {
+    padding: 50px 50px 0;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+
+    background: var(--filter-products-bg);
+    border-radius: 20px;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity, visibility;
+    transition-duration: 0.5s;
+
+    @include abstracts.screen(xl) {
+        padding: 30px 30px 0;
+    }
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+        box-shadow: 0px 40px 90px var(--filter-box-shadow-bg);
+    }
+
+    &__wrap {
+        padding-right: 15px;
+        max-height: calc(100vh - 260px);
+        overflow-y: auto;
+    }
+
+    &__arrow {
+        position: absolute;
+        top: -17px;
+        right: 20px;
+        width: 48.75px;
+
+        filter: var(--filter-products-arrow);
+    }
+
+    &__heading,
+    &-item__heading {
+        color: var(--text-color);
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 145.455%;
+    }
+
+    &__content {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+
+        @include abstracts.screen(lg) {
+            flex-direction: column;
+        }
+    }
+
+    &-item {
+        &__slider {
+            position: relative;
+            margin: 30px 0;
+            width: 272px;
+            height: 2px;
+            background: #d2d1d6;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: -10px;
+                width: 22px;
+                height: 22px;
+                border-radius: 50%;
+                background: #fff;
+                border: 6px solid #ffb700;
+            }
+
+            &::before {
+                left: 10%;
+            }
+
+            &::after {
+                right: 30%;
+            }
+        }
+
+        &__row {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            @include abstracts.screen(xl) {
+                gap: 15px;
+            }
+        }
+
+        &__label {
+            color: var(--text-color);
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 142.857%;
+        }
+
+        &__input {
+            display: block;
+            max-width: 121px;
+            margin-top: 10px;
+            padding: 8px 12px;
+            border-radius: 6px;
+            background: transparent;
+            border: 1px solid #d2d1d6;
+            color: var(--text-color);
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 142.857%;
+        }
+
+        &__row-2 {
+        }
+
+        &__btn {
+            padding: 6px 12px;
+        }
+    }
+
+    &__separate {
+        margin: 0 30px;
+        width: 1px;
+        background: #eee;
+
+        @include abstracts.screen(xl) {
+            margin: 0 10px;
+        }
+
+        @include abstracts.screen(lg) {
+            margin: 30px 0;
+            width: initial;
+            height: 1px;
+        }
+    }
+
+    &__bottom {
+        padding: 20px 0;
+        margin: 18px 0 50px;
+        position: sticky;
+        bottom: 0;
+        display: flex;
+        justify-content: flex-end;
+        background: var(--filter-products-bg);
+
+        @include abstracts.screen(lg) {
+            margin: 18px 0 12px;
+        }
+    }
+
+    &__btn + &__btn {
+        margin-left: 10px;
+    }
+}
+
+.form {
+    &__wrap {
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+        padding: 12.5px 14px;
+        border-radius: 6px;
+        border: 1px solid var(--Secondary-Color-Secondary-3, #d2d1d6);
+
+        &--brand {
+            padding: 10px 14px;
+        }
+    }
+
+    &__select {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        color: var(--text-color);
+
+        &:first-child {
+        }
+    }
+
+    &__select + &__select {
+        margin-left: 14px;
+        padding-left: 14px;
+        border-left: 1px solid #d2d1d6;
+    }
+
+    &__input {
+        border: none;
+        outline: none;
+        width: 100%;
+        background: transparent;
+        color: var(--text-color);
+    }
+
+    &__search {
+        margin-left: 30px;
+        width: 18.764px;
+        height: 19.222px;
+    }
+}

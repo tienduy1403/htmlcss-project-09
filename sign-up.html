@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Grocery Mart</title>
+        <!-- Favicon -->
+        <link
+            rel="apple-touch-icon"
+            sizes="76x76"
+            href="./assets/favicon/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./assets/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+        <link
+            rel="mask-icon"
+            href="./assets/favicon/safari-pinned-tab.svg"
+            color="#5bbad5"
+        />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+        <!-- Font -->
+        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+        <!-- Css -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+        <!-- Scripts -->
+        <script src="./assets/js/scripts.js"></script>
+    </head>
+    <body>
+        <div class="signup__inner">
+            <!-- Left -->
+            <div class="signup-left">
+                <div class="signup-left__wrap">
+                    <!-- Logo -->
+                    <a href="./">
+                        <div class="logo logo-signup d-none d-md-flex">
+                            <img
+                                src="./assets/icon/logo.svg"
+                                alt=""
+                                class="logo__img logo-signup__img"
+                            />
+                            <h1 class="logo__brand logo-signup__brand">
+                                grocerymart
+                            </h1>
+                        </div>
+                    </a>
+                    <img
+                        src="./assets/images/image-signup.svg"
+                        alt=""
+                        class="signup__img"
+                    />
+                    <p class="signup__desc">
+                        The best of luxury brand values, high quality products,
+                        and innovative services
+                    </p>
+                    <img
+                        src="./assets/icon/sign-up-arrow.svg"
+                        alt=""
+                        class="signup-left__img d-none d-md-block js-toggle"
+                        toggle-target="#sign-up"
+                    />
+                </div>
+            </div>
+            <!-- Right -->
+            <div class="signup-right hide" id="sign-up">
+                <div class="signup-right__wrap">
+                    <!-- Logo -->
+                    <a href="./">
+                        <div class="logo logo--sign-up">
+                            <img
+                                src="./assets/icon/logo.svg"
+                                alt=""
+                                class="logo__img logo--sign-up__img"
+                            />
+                            <h1 class="logo__brand">grocerymart</h1>
+                        </div>
+                    </a>
+
+                    <h1 class="signup__heading">Sign Up</h1>
+                    <p class="signup-right__desc">
+                        Let’s create your account and Shop like a pro and save
+                        money.
+                    </p>
+
+                    <!-- Submit Form -->
+                    <form
+                        action="./index-logined.html"
+                        class="form"
+                        autocomplete="off"
+                    >
+                        <div class="form__input">
+                            <input
+                                class="form__input-input"
+                                type="email"
+                                name="email"
+                                id="email"
+                                requied
+                                placeholder="Email"
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                            />
+                            <img
+                                src="./assets/icon/sign-up-email.svg"
+                                alt=""
+                                class="form__img"
+                            />
+                        </div>
+                        <p class="form__error">Email invalidate.</p>
+                        <div class="form__input">
+                            <input
+                                class="form__input-input"
+                                type="password"
+                                name="password"
+                                id="password"
+                                requied
+                                placeholder="Password"
+                                minlength="6"
+                            />
+                            <img
+                                src="./assets/icon/sign-up-password.svg"
+                                alt=""
+                                class="form__img"
+                            />
+                        </div>
+                        <p class="form__error">
+                            Password minimum 6 characters.
+                        </p>
+                        <div class="form__input">
+                            <input
+                                class="form__input-input"
+                                type="password"
+                                name="password"
+                                id="password"
+                                requied
+                                placeholder="Confirm Password"
+                                minlength="6"
+                            />
+                            <img
+                                src="./assets/icon/sign-up-password.svg"
+                                alt=""
+                                class="form__img"
+                            />
+                        </div>
+                        <p class="form__error">
+                            Password you entered does not match.
+                        </p>
+                        <div class="form__row">
+                            <input
+                                class="form__checkbox"
+                                type="checkbox"
+                                name=""
+                                id="checkbox"
+                                checked
+                                hidden
+                            />
+                            <label class="form__label" for="checkbox">
+                                Set as default card
+                            </label>
+                            <a href="#!" class="form__recovery">
+                                Recovery Password
+                            </a>
+                        </div>
+                        <div class="form__button">
+                            <button
+                                class="form__submit form__submit--btn btn btn--primary"
+                            >
+                                Sign Up
+                            </button>
+                            <button class="form__submit btn btn--outline">
+                                <img
+                                    src="./assets/icon/sign-up-gmail.svg"
+                                    alt=""
+                                    class="form__submit--gmail icon"
+                                />
+                                Sign in with Gmail
+                            </button>
+                        </div>
+                    </form>
+                    <div class="signup-right__row">
+                        <p class="signup-right__ques">
+                            You have an account yet?
+                        </p>
+                        <a href="./sign-in.html" class="signup-right__signin">
+                            Sign In
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            window.dispatchEvent(new Event("template-loaded"));
+        </script>
+    </body>
+</html>

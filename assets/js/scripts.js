@@ -165,6 +165,14 @@ function initJsToggle() {
                 $(target).classList.toggle("show", isHidden);
             });
         };
+        document.onclick = function (e) {
+            if (!e.target.closest(target)) {
+                const isHidden = $(target).classList.contains("hide");
+                if (!isHidden) {
+                    button.click();
+                }
+            }
+        };
     });
 }
 

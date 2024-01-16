@@ -32,6 +32,24 @@ html {
     --submit-button-color: #ffb700;
     --text-footer-color: #171c28;
 
+    // Filter-Product
+    --filter-products-bg: #fff;
+    --filter-products-arrow: brightness(0) saturate(100%) invert(100%)
+        sepia(20%) saturate(1137%) hue-rotate(182deg) brightness(123%)
+        contrast(108%);
+
+    --filter-box-shadow-bg: rgba(200, 200, 200, 0.4);
+
+    // BTN
+    --btn-normal-bg: #f8f8fb;
+    --border-color-btn: #d2d1d6;
+
+    // Sign-Up
+    --sign-up-left-bg: #fafafd;
+    --sign-up-right-bg: #fff;
+    --sign-up-placeholder-text-color: #d2d1d6;
+    --form-label-color: #9e9da8;
+
     @include abstracts.screen(md) {
         --act-btn-background: #eee;
         --header-background: #ffffff;

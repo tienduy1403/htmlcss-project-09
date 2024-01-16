@@ -5,8 +5,18 @@
     align-items: center;
 }
 
+%hoverItem {
+    translate: 0 -7px;
+}
+
+%transition {
+    transition: translate 0.3s;
+}
+
 .products {
     --grid-gutter-y: 30px;
+
+    position: relative;
 
     &__row {
         @extend %itemFlexCenter;
@@ -56,6 +66,8 @@
     }
 
     &-item {
+        @extend %transition;
+
         padding: 16px;
         display: flex;
         flex-direction: column;
@@ -64,6 +76,10 @@
         border-radius: 20px;
         background: var(--products-background-color);
         box-shadow: 0px 20px 60px 10px var(--products-background-shadow);
+
+        &:hover {
+            @extend %hoverItem;
+        }
 
         &__image {
             margin-left: auto;

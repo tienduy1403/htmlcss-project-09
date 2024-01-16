@@ -31,4 +31,20 @@ html.dark {
     --input-border-color: #fff;
     --submit-button-color: #ffb700;
     --text-footer-color: #9e9da6;
+
+    // Filter-Product
+    --filter-products-bg: #292e39;
+    --filter-products-arrow: brightness(0) saturate(100%) invert(14%) sepia(12%)
+        saturate(1048%) hue-rotate(183deg) brightness(96%) contrast(89%);
+
+    --filter-box-shadow-bg: rgba(0, 0, 0, 0.4);
+
+    // BTN
+    --btn-normal-bg: #171c28;
+
+    // Sign-Up
+    --sign-up-left-bg: #000;
+    --sign-up-right-bg: #292e39;
+    --sign-up-placeholder-text-color: #b9babe;
+    --form-label-color: #b9babe;
 }

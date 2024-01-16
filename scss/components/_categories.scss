@@ -5,6 +5,14 @@
     align-items: center;
 }
 
+%hoverItem {
+    translate: 0 -7px;
+}
+
+%transition {
+    transition: translate 0.3s;
+}
+
 .cate {
     --grid-gutter-x: 51px;
 
@@ -26,10 +34,16 @@
 
     &-item {
         @extend %itemFlexCenter;
+        @extend %transition;
 
         padding: 20px 26px 20px 20px;
         background: var(--cate-item-background);
         border-radius: 16px;
+        transition: translate 0.3s;
+
+        &:hover {
+            @extend %hoverItem;
+        }
 
         &__img {
             width: 116px;
