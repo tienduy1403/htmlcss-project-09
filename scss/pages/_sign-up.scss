@@ -1,15 +1,23 @@
 @use "../abstracts";
 
-.signup {
+.auth {
     &__inner {
         display: flex;
         min-height: 100vh;
+
+        @supports (-webkit-touch-callout: none) {
+            min-height: -webkit-fill-available;
+        }
     }
 
     &-left {
         display: flex;
         flex-grow: 1;
         background: var(--sign-up-left-bg);
+
+        @include abstracts.screen(md) {
+            background: var(--sign-up-right-bg);
+        }
 
         &__wrap {
             margin: auto;
@@ -62,10 +70,6 @@
         &__wrap {
             margin: auto;
             padding: 30px;
-
-            @include abstracts.screen(sm) {
-                padding: 30px 30px 100px;
-            }
         }
 
         &__desc {
@@ -92,7 +96,7 @@
             gap: 10px;
 
             @include abstracts.screen(sm) {
-                margin-top: 56px;
+                margin-top: 40px;
             }
         }
 
@@ -119,6 +123,7 @@
         line-height: 146.667%;
 
         @include abstracts.screen(sm) {
+            margin-top: 30px;
             font-size: 2.2rem;
             line-height: 145.455%;
         }
@@ -135,7 +140,7 @@
         }
     }
 
-    &-signup {
+    &-auth {
         position: fixed;
         left: 50%;
         top: 80px;
@@ -144,174 +149,6 @@
         &__img {
             width: 32px;
             height: 32px;
-        }
-    }
-}
-
-.form {
-    margin-top: 60px;
-
-    @include abstracts.screen(sm) {
-        margin-top: 30px;
-    }
-
-    &:has(:invalid) &__submit--btn {
-        opacity: 0.5;
-        pointer-events: none;
-    }
-
-    &__input:has(:invalid):has(&__input-input:not(:placeholder-shown)) {
-        border-color: #f00;
-        background: rgba(250, 0, 0, 0.1);
-    }
-
-    &__input:has(:invalid):has(&__input-input:not(:placeholder-shown))
-        + &__error {
-        display: block;
-    }
-
-    &__input {
-        margin-top: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        max-width: 460px;
-        padding: 12px;
-        gap: 10px;
-        border-radius: 10px;
-        border: 1.5px solid var(--Secondary-Color-Secondary-3, #d2d1d6);
-
-        @include abstracts.screen(sm) {
-            margin-top: 20px;
-        }
-
-        &:focus-within {
-            border-color: #77dae6;
-        }
-
-        &-input {
-            outline: none;
-            border: none;
-            background: transparent;
-            width: 100%;
-
-            color: var(--text-color);
-            font-size: 1.8rem;
-            font-weight: 500;
-            line-height: 144.444%;
-
-            &::placeholder {
-                color: var(--sign-up-placeholder-text-color);
-                font-size: 1.8rem;
-                font-weight: 500;
-                line-height: 144.444%;
-
-                @include abstracts.screen(sm) {
-                    font-size: 1.6rem;
-                }
-            }
-        }
-    }
-
-    &__row {
-        margin-top: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    &__label {
-        position: relative;
-        margin-left: 34px;
-        color: var(--form-label-color);
-        font-size: 1.5rem;
-        font-weight: 500;
-        line-height: 146.667%;
-        cursor: pointer;
-        user-select: none;
-
-        @include abstracts.screen(sm) {
-            font-size: 1.4rem;
-            font-weight: 400;
-            line-height: 142.857%;
-        }
-
-        &::before,
-        &::after {
-            content: "";
-            position: absolute;
-            left: -32px;
-            display: inline-block;
-        }
-
-        &::before {
-            width: 18.5px;
-            height: 18.5px;
-            border: 1.5px solid var(--form-label-color);
-            border-radius: 5px;
-        }
-
-        &::after {
-            display: none;
-            top: 4px;
-            left: -29px;
-            width: 12px;
-            height: 7px;
-            border-left: 3px solid #fff;
-            border-bottom: 3px solid #fff;
-            rotate: -45deg;
-        }
-    }
-
-    &__recovery {
-        color: var(--Blue-Blue, #0071dc);
-        font-size: 1.5rem;
-        font-weight: 500;
-        line-height: 146.667%;
-
-        @include abstracts.screen(sm) {
-            font-size: 1.4rem;
-            line-height: 142.857%;
-        }
-    }
-
-    &__button {
-        margin-top: 50px;
-    }
-
-    &__submit {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        width: 100%;
-        padding: 12px 10px;
-        border-radius: 10px;
-        color: var(--text-color);
-        font-size: 1.8rem;
-        line-height: 144.444%;
-    }
-
-    &__submit + &__submit {
-        margin-top: 30px;
-    }
-
-    &__error {
-        position: absolute;
-        display: none;
-        margin-top: 10px;
-        font-size: 1.2rem;
-        color: #f00;
-    }
-
-    &__checkbox {
-        &:checked + .form__label::before {
-            background: #ffb700;
-            border-color: #ffb700;
-        }
-
-        &:checked + .form__label::after {
-            display: inline-block;
         }
     }
 }
