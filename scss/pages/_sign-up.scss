@@ -160,13 +160,12 @@
         pointer-events: none;
     }
 
-    &:has(:invalid) &__input:has(&__input-input:not(:placeholder-shown)) {
+    &__input:has(:invalid):has(&__input-input:not(:placeholder-shown)) {
         border-color: #f00;
         background: rgba(250, 0, 0, 0.1);
     }
 
-    &:has(:invalid)
-        &__input:has(&__input-input:not(:placeholder-shown))
+    &__input:has(:invalid):has(&__input-input:not(:placeholder-shown))
         + &__error {
         display: block;
     }

@@ -2647,11 +2647,11 @@ html.dark {
   opacity: 0.5;
   pointer-events: none;
 }
-.form:has(:invalid) .form__input:has(.form__input-input:not(:placeholder-shown)) {
+.form__input:has(:invalid):has(.form__input-input:not(:placeholder-shown)) {
   border-color: #f00;
   background: rgba(250, 0, 0, 0.1);
 }
-.form:has(:invalid) .form__input:has(.form__input-input:not(:placeholder-shown)) + .form__error {
+.form__input:has(:invalid):has(.form__input-input:not(:placeholder-shown)) + .form__error {
   display: block;
 }
 .form__input {
