@@ -43,7 +43,6 @@
 
     &__heading,
     &-item__heading {
-        color: var(--text-color);
         font-size: 2.2rem;
         font-weight: 500;
         line-height: 145.455%;
@@ -99,7 +98,6 @@
         }
 
         &__label {
-            color: var(--text-color);
             font-size: 1.4rem;
             font-weight: 500;
             line-height: 142.857%;
@@ -113,7 +111,6 @@
             border-radius: 6px;
             background: transparent;
             border: 1px solid #d2d1d6;
-            color: var(--text-color);
             font-size: 1.4rem;
             font-style: normal;
             font-weight: 500;
@@ -182,7 +179,6 @@
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        color: var(--text-color);
 
         &:first-child {
         }
@@ -199,7 +195,6 @@
         outline: none;
         width: 100%;
         background: transparent;
-        color: var(--text-color);
     }
 
     &__search {

@@ -15,6 +15,7 @@ body {
     font-family: "Gordita", sans-serif;
     font-size: 1.6rem;
     background: var(--body-background-color);
+    color: var(--text-color);
 }
 
 a,
@@ -31,11 +32,15 @@ a {
     text-decoration: none;
 }
 
-button {
+button,
+input {
     padding-inline: initial;
     border: none;
     outline: none;
     background: transparent;
+}
+
+button {
     cursor: pointer;
 }
 
@@ -56,7 +61,7 @@ button {
 
     &--primary {
         background: #ffb700;
-        color: var(--text-color);
+
         font-size: 1.4rem;
         font-style: normal;
         font-weight: 500;

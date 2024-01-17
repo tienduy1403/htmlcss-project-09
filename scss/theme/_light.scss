@@ -50,7 +50,26 @@ html {
     --sign-up-placeholder-text-color: #d2d1d6;
     --form-label-color: #9e9da8;
 
+    // Products Page
+    --product-detail-bg: #fff;
+    --product-detail-info-bg: #f6f6f6;
+    --product-detail-info-content-bg: #fff;
+    --product-detail-tag-bg: #ededf6;
+
     @include abstracts.screen(md) {
+        --product-detail-bg: #fafafd;
+        --product-detail-info-bg: #fff;
+    }
+
+    // Breadcrumbs
+    --breadcrumbs-bg: #f6f6f6;
+    --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
+
+    // Search bar
+    --search-bar-bg: #fff;
+
+    @include abstracts.screen(md) {
+        --breadcrumbs-bg: #fff;
         --act-btn-background: #eee;
         --header-background: #ffffff;
         --body-background-color: #eeeeee;
