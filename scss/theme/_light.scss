@@ -56,11 +56,6 @@ html {
     --product-detail-info-content-bg: #fff;
     --product-detail-tag-bg: #ededf6;
 
-    @include abstracts.screen(md) {
-        --product-detail-bg: #fafafd;
-        --product-detail-info-bg: #fff;
-    }
-
     // Breadcrumbs
     --breadcrumbs-bg: #f6f6f6;
     --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
@@ -68,11 +63,21 @@ html {
     // Search bar
     --search-bar-bg: #fff;
 
+    // Review card
+    --review-card-bg: #fafafd;
+
+    // Text content
+    --text-content-hr-bg: #ebebeb;
+
     @include abstracts.screen(md) {
         --breadcrumbs-bg: #fff;
         --act-btn-background: #eee;
         --header-background: #ffffff;
         --body-background-color: #eeeeee;
         --cate-item-background: #fff;
+        --review-card-bg: #fff;
+
+        --product-detail-bg: #fafafd;
+        --product-detail-info-bg: #fff;
     }
 }
