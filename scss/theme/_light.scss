@@ -4,7 +4,12 @@ html {
     --text-color: #1a162e;
     --icon-color: brightness(0) saturate(100%) invert(8%) sepia(6%)
         saturate(7250%) hue-rotate(212deg) brightness(96%) contrast(96%);
+
+    // Header
+    --header-act-dropdown-bg: #fff;
+    --header-act-dropdown-shadow: rgba(200, 200, 200, 0.4);
     --header-background: #eeeeee;
+    --header-act-dropdown-border-color: #d2d1d6;
     --act-btn-background: #fff;
     --act-btn-shadow: rgba(237, 237, 246, 0.2);
     --separate-color: #ededf6;
@@ -13,6 +18,7 @@ html {
     --dropdown-separate-color: #d2d1d6;
     --navbar--background-color: #fff;
     --overlay-background-color: rgb(0, 0, 0, 0.6);
+
     --body-background-color: #f6f6f6;
     --silde-page-color: #fff;
 

@@ -1,6 +1,10 @@
 @use "../abstracts";
 
 html.dark {
+    // Header
+    --header-act-dropdown-bg: #2f3441;
+    --header-act-dropdown-shadow: rgba(23, 28, 40, 0.4);
+    --header-act-dropdown-border-color: #171c28;
     --text-color: #fff;
     --icon-color: brightness(0) saturate(100%) invert(100%) sepia(100%)
         saturate(0%) hue-rotate(239deg) brightness(106%) contrast(102%);
@@ -63,8 +67,8 @@ html.dark {
     }
 
     // Breadcrumbs
-    --breadcurmbs-bg: #171c28;
-    --breadcurmbs-shadow: rgba(23, 28, 40, 0.2);
+    --breadcrumbs-bg: #171c28;
+    --breadcrumbs-shadow: rgba(23, 28, 40, 0.2);
 
     @include abstracts.screen(md) {
         --breadcrumbs-bg: #171c28;

@@ -10,8 +10,8 @@
     padding: 20px;
     border-radius: 10px;
 
-    background: var(--breadcurmbs-bg);
-    box-shadow: 0px 20px 60px 10px var(--breadcurmbs-shadow);
+    background: var(--breadcrumbs-bg);
+    box-shadow: 0px 20px 60px 10px var(--breadcrumbs-shadow);
 
     @include abstracts.screen(md) {
         gap: 16px;
