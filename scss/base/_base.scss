@@ -31,6 +31,20 @@ select {
     font-family: inherit;
 }
 
+textarea {
+    resize: none;
+}
+
+input,
+textarea {
+    background: transparent;
+    color: inherit;
+
+    @include abstracts.screen(md) {
+        font-size: 1.6rem;
+    }
+}
+
 a {
     color: inherit;
     text-decoration: none;

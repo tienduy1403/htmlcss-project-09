@@ -81,6 +81,11 @@ html {
     --checkout-cart-info-shadow: rgba(237, 237, 246, 0.2);
     --checkout-border-color: #d2d1d6;
     --checkout-gift-shadow: rgba(237, 237, 246, 0.2);
+    --checkout-payment-item-bg: #f6f6f6;
+
+    // Dialog
+    --modal-bg: #fff;
+    --modal-shadow: rgba(237, 237, 246, 0.2);
 
     @include abstracts.screen(md) {
         --breadcrumbs-bg: #fff;

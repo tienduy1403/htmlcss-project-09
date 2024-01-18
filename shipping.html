@@ -70,8 +70,17 @@
                 <div class="checkout-container">
                     <ul class="breadcrumbs checkout-page__breadcrumbs">
                         <li>
-                            <a href="./" class="breadcrumbs__link">
+                            <a href="./checkout.html" class="breadcrumbs__link">
                                 Home
+                                <img
+                                    src="./assets/icon/arrow-right.svg"
+                                    alt=""
+                                />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./checkout.html" class="breadcrumbs__link">
+                                Checkout
                                 <img
                                     src="./assets/icon/arrow-right.svg"
                                     alt=""
@@ -83,7 +92,7 @@
                                 href="#!"
                                 class="breadcrumbs__link breadcrumbs__link--current"
                             >
-                                Checkout
+                                Shipping
                             </a>
                         </li>
                     </ul>
@@ -94,6 +103,177 @@
                     <div class="row gy-xl-3">
                         <div class="col-8 col-xl-12">
                             <div class="cart-info">
+                                <h1 class="cart-info__heading">
+                                    1. Shipping, arrives between Mon, May
+                                    16—Tue, May 24
+                                </h1>
+                                <div class="cart-info__separate"></div>
+
+                                <!-- Checkout address -->
+                                <div class="user-address">
+                                    <div class="user-address__top">
+                                        <div>
+                                            <h2 class="user-address__title">
+                                                Shipping address
+                                            </h2>
+                                            <p class="user-address__desc">
+                                                Where should we deliver your
+                                                order?
+                                            </p>
+                                        </div>
+                                        <button
+                                            class="user-address__btn btn btn--outline btn--rounded js-toggle"
+                                            toggle-target="#add-new-address"
+                                        >
+                                            <img
+                                                class="icon"
+                                                src="./assets/icon/plus.svg"
+                                                alt=""
+                                            />
+                                            Add a new address
+                                        </button>
+
+                                        <!-- Empty message -->
+                                        <!-- <p class="user-address__message">
+                                            Not address yet.
+                                            <a class="user-address__link js-toggle" href="#!" toggle-target="#add-new-address">Add a new address</a>
+                                        </p> -->
+                                    </div>
+                                    <div class="user-address__list">
+                                        <!-- Address card 1 -->
+                                        <article class="address-card">
+                                            <div class="address-card__left">
+                                                <div
+                                                    class="address-card__choose"
+                                                >
+                                                    <!-- Custom checkbox -->
+                                                    <label
+                                                        class="cart-info__checkbox"
+                                                    >
+                                                        <input
+                                                            type="radio"
+                                                            name="address"
+                                                            checked
+                                                            class="address-card__checkbox-input"
+                                                        />
+                                                    </label>
+                                                </div>
+                                                <div class="address-card__info">
+                                                    <h3
+                                                        class="address-card__title"
+                                                    >
+                                                        Imran Khan
+                                                    </h3>
+                                                    <p
+                                                        class="address-card__desc"
+                                                    >
+                                                        Museum of Rajas, Sylhet
+                                                        Sadar, Sylhet 3100.
+                                                    </p>
+                                                    <ul
+                                                        class="address-card__list"
+                                                    >
+                                                        <li
+                                                            class="address-card__list-item"
+                                                        >
+                                                            Shipping
+                                                        </li>
+                                                        <li
+                                                            class="address-card__list-item"
+                                                        >
+                                                            Delivery from store
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="address-card__right">
+                                                <div class="address-card__ctrl">
+                                                    <button
+                                                        class="cart-info__edit-btn js-toggle"
+                                                        toggle-target="#add-new-address"
+                                                    >
+                                                        <img
+                                                            class="icon"
+                                                            src="./assets/icon/edit.svg"
+                                                            alt=""
+                                                        />
+                                                        Edit
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </article>
+
+                                        <!-- Address card 2 -->
+                                        <article class="address-card">
+                                            <div class="address-card__left">
+                                                <div
+                                                    class="address-card__choose"
+                                                >
+                                                    <label
+                                                        class="cart-info__checkbox"
+                                                    >
+                                                        <input
+                                                            type="radio"
+                                                            name="address"
+                                                            class="address-card__checkbox-input"
+                                                        />
+                                                    </label>
+                                                </div>
+                                                <div class="address-card__info">
+                                                    <h3
+                                                        class="address-card__title"
+                                                    >
+                                                        Imran Khan
+                                                    </h3>
+                                                    <p
+                                                        class="address-card__desc"
+                                                    >
+                                                        Al Hamra City (10th
+                                                        Floor), Hazrat Shahjalal
+                                                        Road, Sylhet, Sylhet,
+                                                        Bangladesh
+                                                    </p>
+                                                    <ul
+                                                        class="address-card__list"
+                                                    >
+                                                        <li
+                                                            class="address-card__list-item"
+                                                        >
+                                                            Shipping
+                                                        </li>
+                                                        <li
+                                                            class="address-card__list-item"
+                                                        >
+                                                            Delivery from store
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="address-card__right">
+                                                <div class="address-card__ctrl">
+                                                    <button
+                                                        class="cart-info__edit-btn js-toggle"
+                                                        toggle-target="#add-new-address"
+                                                    >
+                                                        <img
+                                                            class="icon"
+                                                            src="./assets/icon/edit.svg"
+                                                            alt=""
+                                                        />
+                                                        Edit
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+
+                                <div class="cart-info__separate"></div>
+
+                                <h2 class="cart-info__sub-heading">
+                                    Items details
+                                </h2>
+
                                 <div class="cart-info__list">
                                     <!-- Cart item 1 -->
                                     <article class="cart-item">
@@ -472,7 +652,7 @@
                                     <span>$201.65</span>
                                 </div>
                                 <a
-                                    href="./shipping.html"
+                                    href="./payment.html"
                                     class="cart-info__next-btn btn btn--primary btn--rounded"
                                 >
                                     Continue to checkout
@@ -509,7 +689,7 @@
         <!-------------- Footer ------------>
         <footer id="footer" class="footer"></footer>
 
-        <!-- Dialog / modal -->
+        <!-- Modal -->
         <div id="delete-confirm" class="modal hide">
             <div class="modal__content">
                 <div class="modal__text">
@@ -534,6 +714,117 @@
                 class="modal__overlay js-toggle"
                 toggle-target="#delete-confirm"
             ></div>
+        </div>
+        <!-- Modal: address new shopping address -->
+        <div
+            id="add-new-address"
+            class="modal hide modal--large"
+            style="--content-width: 650px"
+        >
+            <div class="modal__content">
+                <h2 class="modal__heading">Add new shopping address</h2>
+                <div class="modal__body">
+                    <form action="" class="form modal-form">
+                        <div class="modal__inline">
+                            <div>
+                                <label for="name" class="form-label">
+                                    Name
+                                </label>
+                                <div class="form__input modal-input">
+                                    <input
+                                        class="form__input-input"
+                                        type="text"
+                                        name="name"
+                                        id="name"
+                                        required
+                                        placeholder="Name"
+                                        minlength="2"
+                                    />
+                                </div>
+                                <p class="form__error">
+                                    Name minimum 2 characters.
+                                </p>
+                            </div>
+                            <div>
+                                <label for="name" class="form-label">
+                                    Phone
+                                </label>
+                                <div class="form__input modal-input">
+                                    <input
+                                        class="form__input-input"
+                                        type="text"
+                                        name="name"
+                                        id="name"
+                                        required
+                                        placeholder="Phone"
+                                        minlength="10"
+                                    />
+                                </div>
+                                <p class="form__error">
+                                    Phone minimum 10 characters.
+                                </p>
+                            </div>
+                        </div>
+                        <label for="name" class="form-label"> Address </label>
+                        <div
+                            class="form__input modal-input modal-input__textarea"
+                        >
+                            <textarea
+                                class="form__input-input"
+                                type="text"
+                                name="name"
+                                id="name"
+                                required
+                                placeholder="Address/Street"
+                            ></textarea>
+                        </div>
+                        <p class="form__error">Address not empty</p>
+                        <label for="name" class="form-label">
+                            City/District/Town
+                        </label>
+                        <div class="form__input modal-input">
+                            <input
+                                class="form__input-input"
+                                type="text"
+                                name="name"
+                                id="name"
+                                required
+                                placeholder="City/District/Town"
+                                minlength="10"
+                            />
+                        </div>
+                        <p class="form__error">Phone minimum 10 characters.</p>
+                        <div class="form__row">
+                            <input
+                                class="form__checkbox"
+                                type="checkbox"
+                                name=""
+                                id="checkbox"
+                                checked
+                                hidden
+                            />
+                            <label class="form__label" for="checkbox">
+                                Set as default card
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal__bottom">
+                    <button
+                        class="btn btn--small btn--text modal__btn js-toggle"
+                        toggle-target="#add-new-address"
+                    >
+                        Cancel
+                    </button>
+                    <button
+                        class="btn btn--small btn--primary modal__btn btn--no-margin js-toggle"
+                        toggle-target="#add-new-address"
+                    >
+                        Create
+                    </button>
+                </div>
+            </div>
+            <div class="modal__overlay"></div>
         </div>
         <script>
             load("#footer", "./templates/footer.html");

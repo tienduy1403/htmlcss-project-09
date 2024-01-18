@@ -178,4 +178,17 @@
             display: inline-block;
         }
     }
+
+    &-label {
+        display: block;
+        font-size: 1.4rem;
+        font-weight: 5;
+        line-height: 141.667%;
+
+        margin: 30px 0 10px;
+
+        @include abstracts.screen(md) {
+            margin-top: 20px;
+        }
+    }
 }
