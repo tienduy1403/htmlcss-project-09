@@ -84,6 +84,9 @@ button {
 }
 
 .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 9px 10px;
     border-radius: 6px;
 
@@ -115,4 +118,10 @@ button {
     &--outline {
         border: 1px solid var(--border-color-btn);
     }
+}
+
+.separate {
+    margin: var(--margin) 0;
+    height: 1px;
+    background: var(--separate-color);
 }

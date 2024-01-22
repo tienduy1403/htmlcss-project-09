@@ -5075,9 +5075,12 @@
                                 <h2 class="act-dropdown__title">
                                     You have 3 item(s)
                                 </h2>
-                                <a href="#!" class="act-dropdown__view-all"
-                                    >See All</a
+                                <a
+                                    href="./favourite.html"
+                                    class="act-dropdown__view-all"
                                 >
+                                    See All
+                                </a>
                             </div>
                             <div class="row row-cols-3 gx-2 act-dropdown__list">
                                 <!-- Cart preview item 1 -->
@@ -5300,11 +5303,83 @@
                 </div>
             </div>
 
-            <img
-                src="./assets/images/uifaces-popular-image.jpg"
-                alt=""
-                class="action__avatar"
-            />
+            <div class="action__user">
+                <img
+                    src="./assets/images/uifaces-popular-image.jpg"
+                    alt=""
+                    class="action__avatar"
+                />
+                <!-- Dropdown -->
+                <div class="act-dropdown action__dropdown">
+                    <div class="act-dropdown__inner user-menu">
+                        <img
+                            src="./assets/icon/filter-arrow.png"
+                            alt=""
+                            class="act-dropdown__arrow action__dropdown-arrow"
+                        />
+
+                        <a href="./profile.html">
+                            <div class="user-menu__top">
+                                <img
+                                    src="./assets/images/uifaces-popular-image.jpg"
+                                    alt=""
+                                    class="user-menu__avatar"
+                                />
+                                <div>
+                                    <p class="user-menu__name">John Smith</p>
+                                    <p>@johnsmith</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <ul class="user-menu__list">
+                            <li>
+                                <a
+                                    href="./profile.html"
+                                    class="user-menu__link"
+                                >
+                                    Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="./favourite.html"
+                                    class="user-menu__link"
+                                >
+                                    Favourite list
+                                </a>
+                            </li>
+                            <li class="user-menu__separate">
+                                <a
+                                    href="#!"
+                                    class="user-menu__link"
+                                    id="switch-theme-btn"
+                                >
+                                    <span>Dark mode</span>
+                                    <img
+                                        src="./assets/icon/sun.svg"
+                                        alt=""
+                                        class="icon user-menu__icon"
+                                    />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#!" class="user-menu__link">
+                                    Settings
+                                </a>
+                            </li>
+                            <li class="user-menu__separate">
+                                <a
+                                    href="./sign-in.html"
+                                    class="user-menu__link"
+                                >
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
