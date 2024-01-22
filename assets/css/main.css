@@ -1781,6 +1781,7 @@ html.dark {
   font-size: 2.2rem;
   font-weight: 500;
   line-height: 145.455%;
+  color: var(--text-color);
 }
 .act-dropdown__view-all {
   color: #0071dc;
@@ -1811,6 +1812,7 @@ html.dark {
   margin-top: 10px;
 }
 .act-dropdown__label, .act-dropdown__value {
+  color: var(--text-color);
   font-size: 1.8rem;
   line-height: 145.455%;
 }
@@ -1828,7 +1830,7 @@ html.dark {
 .act-dropdown__separate {
   margin: 20px 0;
   height: 1px;
-  background: var(--header-act-dropdown-border-color);
+  background: var(--text-color);
 }
 
 .cart-preview-item {
@@ -1837,7 +1839,7 @@ html.dark {
 .cart-preview-item__img-wrap {
   position: relative;
   padding-top: 100%;
-  border: 1.5px solid var(--header-act-dropdown-border-color);
+  border: 1.5px solid var(--text-color);
   border-radius: 10px;
 }
 .cart-preview-item__thumb {
@@ -1852,12 +1854,14 @@ html.dark {
   margin-top: 14px;
   font-size: 1.4rem;
   line-height: 142.857%;
+  color: var(--text-color);
 }
 .cart-preview-item__price {
   margin-top: 6px;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 146.667%;
+  color: var(--text-color);
 }
 
 .user-menu__top {
